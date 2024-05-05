@@ -10,10 +10,16 @@ Then, run the php server:
 symfony server:start
 ```
 
+Then, create database:
+
+```bash
+php bin/console doctrine:database:create
+```
+
 Then, run migration:
 
 ```bash
-php bin/console doctrine:migrations:migrate
+php bin/console doctrine:schema:update --force
 ```
 
 Then, run the famous command:
